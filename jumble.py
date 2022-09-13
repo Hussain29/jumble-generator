@@ -7,8 +7,12 @@ WORD2 = input("Enter the 2nd word: ").upper()
 WORD3 = input("Enter the 3rd word: ").upper()
 WORD4 = input("Enter the 4th word: ").upper()
 
+print('\n')
+
 # taking input of 'riddle' string
-RIDDLE = input("Enter the riddle word:").upper()
+RIDDLE = input("Enter the riddle word: ").upper()
+
+print('\n')
 
 # removing spaces from the 'riddle' string
 RIDWOSPACE = RIDDLE.replace(" ", "")
@@ -20,11 +24,14 @@ MASTER = ''.join((WORD1, WORD2, WORD3, WORD4))
 BLANK = "[   ]"
 REQ_LETTER = "[ _ ]"
 
+
 # checking if the 'riddle' is solvable from the given 'clues'
 if len(set(RIDWOSPACE) - set(MASTER)) == 0:
-    print("Riddle can be solved.")
+    print("Riddle can be solved.", end = '')
 else:
-    print("Riddle cannot be solved. Try Again.")
+    print("Riddle cannot be solved. Try Again.", end = '')
+
+print('\n')
 
 #creating a variable to control duplicate 'clue' letters
 check = list(RIDWOSPACE)
@@ -32,8 +39,7 @@ check = list(RIDWOSPACE)
 #creating a list of the 4 'clue' words to iterate through
 words = [WORD1,WORD2,WORD3,WORD4]
 
-for ch in range(len(RIDDLE)):
-    print("=====", end = '')
+print('+-' + '-----'*(len(RIDDLE)) + '-+')
 
 print('\n')
 #block of code that prints the letters and positions
@@ -54,18 +60,20 @@ for word in words:    #here we're going through the 'words'
     print("\n")
     JUMBLE = ''
 
-for ch in range(len(RIDDLE)):
-    print("=====", end = '')
+print('\n')
+print('+-' + '-----'*(len(RIDDLE)) + '-+')
 
 print('\n')    
 #add riddle word blanks
 print("Fill In The Riddle:")
+print('\n')
 for ch in RIDDLE:    #prints the blanks for the 'riddle' word
     if ch == " ":
-        print("    ",end='')
+        print("     ",end='')
     else:
         print(BLANK,end='')
 
 print('\n')
-for ch in range(len(RIDDLE)):
-    print("=====", end = '')
+print('\n')
+print('+-' + '-----'*(len(RIDDLE)) + '-+')
+print('\n')
