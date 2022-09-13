@@ -62,7 +62,6 @@ for word in words:    #here we're going through the 'words'
                 print(BLANK,end='')    #prints regular blank
         else:
             print(BLANK,end='')
-    print(COUNT)
     print('\n')
     JUMBLE = ''
 
