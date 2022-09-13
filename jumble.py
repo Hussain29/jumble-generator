@@ -39,6 +39,7 @@ check = list(RIDWOSPACE)
 #creating a list of the 4 'clue' words to iterate through
 words = [WORD1,WORD2,WORD3,WORD4]
 
+#print a seperating line
 print('+-' + '-----'*(len(RIDDLE)) + '-+')
 
 print('\n')
@@ -60,6 +61,7 @@ for word in words:    #here we're going through the 'words'
     print("\n")
     JUMBLE = ''
 
+#print a seperating line
 print('\n')
 print('+-' + '-----'*(len(RIDDLE)) + '-+')
 
@@ -74,6 +76,7 @@ for ch in RIDDLE:    #prints the blanks for the 'riddle' word
         print(BLANK,end='')
 
 print('\n')
+#print a seperating line
 print('\n')
 print('+-' + '-----'*(len(RIDDLE)) + '-+')
 print('\n')
