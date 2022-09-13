@@ -43,25 +43,20 @@ print('+-' + '-----'*(len(RIDDLE)) + '-+')
 
 print('\n')
 #block of code that prints the letters and positions
+
 for word in words:    #here we're going through the 'words'
     JUMBLE = ''.join(random.sample(word, len(word)))    #jumbles the current word in the loop 
     for ch in JUMBLE:
         print('  '+ ch + '  ',end='')    #prints the letters from the jumble
 
-    print('\n', end = '') 
-    
-    #now, we start printing blanks in the next line
-    COUNT = 0    #variable to make sure there aren't too many hints in one jumbled word
+    print('\n', end = '')    #now, we start printing blanks in the next line
     for ch in word:
-        if COUNT < 3:    #checks if there are more than 3 'clue' lettters are printed
-            if ch in check:    #this checks if the letter is required to solve the riddle
-                print(REQ_LETTER,end='')    #prints the underlined blank
-                check.remove(ch)    #removes the letter so it doesnt check for it again
-                COUNT += 1
-            else:
-                print(BLANK,end='')    #prints regular blank
+        if ch in check:   #this checks if the letter is required to solve the riddle
+            print(REQ_LETTER,end='')    #prints the underlined blank
+            check.remove(ch)    #removes the letter so it doesnt check for it again
         else:
-            print(BLANK,end='')
+            print(BLANK,end='')    #prints regular blank
+
     print('\n')
     JUMBLE = ''
 
